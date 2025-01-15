@@ -81,7 +81,7 @@ void drawDonut() {
                 float z = innerRadius * sin(phi);
 
                 float t = (float)j / rings;
-                glColor3f(0.8f * (1.0f - t) + 1.0f * t, 0.5f * (1.0f - t) + 0.2f * t, 0.2f * (1.0f - t) + 0.8f * t);
+                glColor3f(0.8f * (2.0f - t) + 1.0f * t, 0.5f * (1.0f - t) + 0.2f * t, 0.2f * (1.0f - t) + 0.8f * t);
                 glVertex3f(x, y, z);
          
 		    }
@@ -115,12 +115,6 @@ void display() {
         glVertex3f(0.0, 10.0, 0.0);
     glEnd();
 
-    // Gambar sumbu Z (biru)
-    glColor3f(0.0, 0.0, 1.0); // Warna biru
-    glBegin(GL_LINES);
-        glVertex3f(0.0, 0.0, -10.0);
-        glVertex3f(0.0, 0.0, 10.0);
-    glEnd();
 
     
      // Atur posisi pencahayaan
