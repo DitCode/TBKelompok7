@@ -30,7 +30,7 @@ float lightPosY = -100.0f;
 float lightPosZ = 100.0f;
 	
 // Variabel untuk memilih objek (1 = Cheesecake, 2 = Donut, 3 = Cup Cake)
-int currentObject = 1;
+int currentObject = 2;
 
 // Muhammad Aditya Heryadi
 // Fungsi untuk mengatur pencahayaan
@@ -138,21 +138,6 @@ void display() {
     glutSwapBuffers();
 }
 
-void drawLight()
-{
-    glDisable(GL_LIGHTING); // Matikan pencahayaan 
-    glPushMatrix();
-
-    // Posisikan bola matahari di lokasi cahaya
-    glTranslatef(lightPosX, lightPosY, lightPosZ);
-
-    // Atur warna tetap untuk cahaya (oranye)
-    glColor3f(1.0f, 0.7f, 0.0f); // Warna oranye kekuningan untuk matahari
-    glutSolidSphere(5.0, 20, 20); // Menggambar bola sebagai representasi cahaya
-
-    glPopMatrix();
-    glEnable(GL_LIGHTING); // Aktifkan kembali pencahayaan
-}
 
 void reshape(int w, int h) {
     glViewport(0, 0, w, h);
